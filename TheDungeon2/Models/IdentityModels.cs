@@ -6,9 +6,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using TheDungeon2.Models;
+using TheDungeon.Models;
 
-namespace TheDungeon2.Models
+namespace TheDungeon.Models
 {
     // You can add User data for the user by adding more properties to your User class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
@@ -42,7 +42,7 @@ namespace TheDungeon2.Models
 }
 
 #region Helpers
-namespace TheDungeon2
+namespace TheDungeon
 {
     public static class IdentityHelper
     {

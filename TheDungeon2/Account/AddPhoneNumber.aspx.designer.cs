@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TheDungeon2.Account {
+namespace TheDungeon.Account {
     
     
     public partial class AddPhoneNumber {

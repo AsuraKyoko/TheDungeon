@@ -4,9 +4,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
-using TheDungeon2.Models;
+using TheDungeon.Models;
 
-namespace TheDungeon2.Account
+namespace TheDungeon.Account
 {
     public partial class RegisterExternalLogin : System.Web.UI.Page
     {

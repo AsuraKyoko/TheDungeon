@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TheDungeon2 {
+namespace TheDungeon {
     
     
     public partial class ViewSwitcher {

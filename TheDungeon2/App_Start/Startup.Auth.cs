@@ -7,9 +7,9 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using TheDungeon2.Models;
+using TheDungeon.Models;
 
-namespace TheDungeon2
+namespace TheDungeon
 {
     public partial class Startup {
 
@@ -59,11 +59,12 @@ namespace TheDungeon2
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            //TODO: use secret manager
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "833634400504-7i3eptbpv70fviloh8jsr72df41b4ie0.apps.googleusercontent.com",
+                ClientSecret = "AsBnN0liS8drAjvelFYlwAfL"
+            });
         }
     }
 }

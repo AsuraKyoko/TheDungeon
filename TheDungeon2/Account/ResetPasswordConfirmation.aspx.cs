@@ -1,6 +1,6 @@
 ﻿using System.Web.UI;
 
-namespace TheDungeon2.Account
+namespace TheDungeon.Account
 {
     public partial class ResetPasswordConfirmation : Page
     {

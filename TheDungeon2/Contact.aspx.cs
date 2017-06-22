@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace TheDungeon2
+namespace TheDungeon
 {
     public partial class Contact : Page
     {

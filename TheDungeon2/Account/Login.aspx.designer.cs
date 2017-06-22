@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TheDungeon2.Account {
+namespace TheDungeon.Account {
     
     
     public partial class Login {
@@ -73,6 +73,6 @@ namespace TheDungeon2.Account {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::TheDungeon2.Account.OpenAuthProviders OpenAuthLogin;
+        protected global::TheDungeon.Account.OpenAuthProviders OpenAuthLogin;
     }
 }

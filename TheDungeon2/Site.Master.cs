@@ -8,7 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 
-namespace TheDungeon2
+namespace TheDungeon
 {
     public partial class SiteMaster : MasterPage
     {

@@ -7,9 +7,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
-using TheDungeon2.Models;
+using TheDungeon.Models;
 
-namespace TheDungeon2.Account
+namespace TheDungeon.Account
 {
     public partial class TwoFactorAuthenticationSignIn : System.Web.UI.Page
     {
