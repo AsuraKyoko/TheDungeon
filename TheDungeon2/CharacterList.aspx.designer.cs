@@ -31,48 +31,21 @@ namespace TheDungeon {
         protected global::System.Web.UI.WebControls.CheckBox RetiredCheckBox;
         
         /// <summary>
-        /// CharacterTable control.
+        /// CharactersGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table CharacterTable;
+        protected global::System.Web.UI.WebControls.GridView CharactersGridView;
         
         /// <summary>
-        /// Name control.
+        /// CharacterListDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell Name;
-        
-        /// <summary>
-        /// Tags control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell Tags;
-        
-        /// <summary>
-        /// Active control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell Active;
-        
-        /// <summary>
-        /// Timestamp control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell Timestamp;
+        protected global::System.Web.UI.WebControls.SqlDataSource CharacterListDataSource;
     }
 }
