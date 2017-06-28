@@ -15,6 +15,10 @@ namespace TheDungeon
             {
                 Response.Redirect("~/Login.aspx");
             }
+            else
+            {
+                Session.Add("UserId", User.Identity.Name);
+            }
         }
     }
 }
