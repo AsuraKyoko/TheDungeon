@@ -2,7 +2,7 @@
 
 namespace TheDungeon.Account
 {
-    public partial class ResetPasswordConfirmation : Page
-    {
-    }
+	public partial class ResetPasswordConfirmation : Page
+	{
+	}
 }

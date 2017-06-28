@@ -7,14 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace TheDungeon
 {
-    public partial class _Default : Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (User.Identity.IsAuthenticated) // if the user is already logged in
-            {
-                Response.Redirect("~/CharacterList.aspx");
-            }
-        }
-    }
+	public partial class _Default : Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
+			if (User.Identity.IsAuthenticated) // if the user is already logged in
+			{
+				Response.Redirect("~/CharacterList.aspx");
+			}
+		}
+	}
 }
