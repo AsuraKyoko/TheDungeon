@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.AspNet.Identity;
 
 namespace TheDungeon
 {
@@ -17,8 +18,18 @@ namespace TheDungeon
 			}
 			else
 			{
-				Session.Add("UserId", User.Identity.Name);
+				Session["UserId"] = User.Identity.GetUserId();
 			}
+		}
+
+		protected void AddCharacterButton_Click(object sender, EventArgs e)
+		{
+			//TODO: implement adding new character
+		}
+
+		protected void CharactersGridView_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			//TODO: implement selection/character sheet loading
 		}
 	}
 }

@@ -4,11 +4,14 @@
 	<h2><%: Title %>.</h2>
 	<asp:TextBox ID="FilterTextBox" runat="server"></asp:TextBox>
 		<asp:CheckBox ID="RetiredCheckBox" runat="server" Text="Show Retired Characters" />
-	<asp:GridView ID="CharactersGridView" runat="server" AutoGenerateColumns="False" DataSourceID="CharacterListDataSource" AllowSorting="True">
+		<br />
+	<asp:Button ID="AddCharacterButton" runat="server" Text="Add Character" OnClick="AddCharacterButton_Click" />
+	<br />
+	<asp:GridView ID="CharactersGridView" runat="server" AutoGenerateColumns="False" DataSourceID="CharacterListDataSource" AllowSorting="True" OnSelectedIndexChanged="CharactersGridView_SelectedIndexChanged">
 		<Columns>
-			<asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-			<asp:CheckBoxField DataField="Active" HeaderText="Active" SortExpression="Active" />
-			<asp:BoundField DataField="DateCreated" HeaderText="DateCreated" SortExpression="DateCreated" />
+			<asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" ReadOnly="True" />
+			<asp:CheckBoxField DataField="Active" HeaderText="Active" SortExpression="Active" ReadOnly="True" />
+			<asp:BoundField DataField="DateCreated" HeaderText="DateCreated" SortExpression="DateCreated" ReadOnly="True" />
 		</Columns>
 	</asp:GridView>
 	<asp:SqlDataSource ID="CharacterListDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Name], [Active], [DateModified], [DateCreated] FROM [Characters] WHERE ([User] = @User)">
