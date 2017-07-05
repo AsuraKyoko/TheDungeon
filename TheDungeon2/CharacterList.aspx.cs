@@ -26,10 +26,5 @@ namespace TheDungeon
 		{
 			//TODO: implement adding new character
 		}
-
-		protected void CharactersGridView_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			//TODO: implement selection/character sheet loading
-		}
 	}
 }

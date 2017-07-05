@@ -7,14 +7,15 @@
 		<br />
 	<asp:Button ID="AddCharacterButton" runat="server" Text="Add Character" OnClick="AddCharacterButton_Click" />
 	<br />
-	<asp:GridView ID="CharactersGridView" runat="server" AutoGenerateColumns="False" DataSourceID="CharacterListDataSource" AllowSorting="True" OnSelectedIndexChanged="CharactersGridView_SelectedIndexChanged">
+	<asp:GridView ID="CharactersGridView" runat="server" AutoGenerateColumns="False" DataSourceID="CharacterListDataSource" AllowSorting="True">
 		<Columns>
-			<asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" ReadOnly="True" />
+			<asp:HyperLinkField DataTextField="Name" HeaderText="Name" NavigateUrl="~/CharacterSheet.aspx" />
 			<asp:CheckBoxField DataField="Active" HeaderText="Active" SortExpression="Active" ReadOnly="True" />
-			<asp:BoundField DataField="DateCreated" HeaderText="DateCreated" SortExpression="DateCreated" ReadOnly="True" />
+			<asp:BoundField DataField="DateModified" HeaderText="Last Modified" />
+			<asp:BoundField DataField="DateCreated" HeaderText="Date Created" SortExpression="DateCreated" ReadOnly="True" />
 		</Columns>
 	</asp:GridView>
-	<asp:SqlDataSource ID="CharacterListDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Name], [Active], [DateModified], [DateCreated] FROM [Characters] WHERE ([User] = @User)">
+	<asp:SqlDataSource ID="CharacterListDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Id], [Name], [Active], [DateModified], [DateCreated] FROM [Characters] WHERE ([User] = @User)">
 		<SelectParameters>
 			<asp:SessionParameter Name="User" SessionField="UserId" Type="String" />
 		</SelectParameters>

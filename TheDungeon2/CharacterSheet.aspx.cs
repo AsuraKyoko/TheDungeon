@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.AspNet.Identity;
 
 namespace TheDungeon2
 {
@@ -14,6 +15,10 @@ namespace TheDungeon2
 			if (!User.Identity.IsAuthenticated) // if the user is not logged in
 			{
 				Response.Redirect("~/Login.aspx");
+			}
+			else if (!(User.Identity.GetUserId() == CharacterDataSource.))    //TODO check user ID versus character owner
+			{
+				Response.Redirect("~/CharacterList.aspx");	//TODO: display message/access denied page
 			}
 		}
 	}
