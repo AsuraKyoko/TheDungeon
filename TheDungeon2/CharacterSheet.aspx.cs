@@ -20,7 +20,7 @@ namespace TheDungeon2
 		{
 			if (!User.Identity.IsAuthenticated) // if the user is not logged in
 			{
-				Response.Redirect("~/Login.aspx");
+				Response.Redirect("~/Account/Login.aspx");
 				return;
 			}
 

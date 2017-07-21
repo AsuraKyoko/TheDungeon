@@ -31,13 +31,49 @@ namespace TheDungeon {
         protected global::System.Web.UI.WebControls.CheckBox RetiredCheckBox;
         
         /// <summary>
-        /// AddCharacterButton control.
+        /// CharacterNameFieldValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddCharacterButton;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CharacterNameFieldValidator;
+        
+        /// <summary>
+        /// AddCharacterNameTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox AddCharacterNameTextBox;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// AddCharacterFileUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload AddCharacterFileUpload;
+        
+        /// <summary>
+        /// ConfirmAddButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ConfirmAddButton;
         
         /// <summary>
         /// CharactersGridView control.
