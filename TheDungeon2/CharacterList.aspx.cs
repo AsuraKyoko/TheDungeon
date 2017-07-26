@@ -22,20 +22,10 @@ namespace TheDungeon
 			}
 		}
 
-		protected void AddCharacterButton_Click(object sender, EventArgs e)
-		{
-			//TODO: use Javascript to toggle panel visibility
-		}
-
 		protected void ConfirmAddButton_Click(object sender, EventArgs e)
 		{
 			//TODO: add character to database
 
-		}
-
-		protected void CancelAddButton_Click(object sender, EventArgs e)
-		{
-			//TODO: use javascript to toggle panel visibility
 		}
 	}
 }

@@ -6,10 +6,15 @@
 		function ShowAddCharacterPanel() {
 			document.getElementById('AddCharacterPanel').style.display = 'block';
 			document.getElementById('AddCharacterButton').style.display = 'none';
+			ClearAddCharacterPanel();
 		};
 		function HideAddCharacterPanel() {
 			document.getElementById('AddCharacterPanel').style.display = 'none';
 			document.getElementById('AddCharacterButton').style.display = 'block';
+		};
+		function ClearAddCharacterPanel() {
+			document.getElementById('<%=AddCharacterNameTextBox.ClientID %>').value = "";
+			document.getElementById('<%=AddCharacterFileUpload.ClientID %>').value = "";
 		};
 	</script>
 	<h2><%: Title %>.</h2>
