@@ -37,7 +37,7 @@ namespace TheDungeon2
 
 		protected void UploadButton_Click(object sender, EventArgs e)
 		{
-			if (CharacterSheetFileUpload.PostedFile.ContentType == "text/txt")
+			if (CharacterSheetFileUpload.PostedFile.ContentType == "text/txt")		//TODO: include other text file formats
 			{
 				if(File.Exists(filePath))
 				{
@@ -57,7 +57,7 @@ namespace TheDungeon2
 			if (File.Exists(filePath))
 			{
 				Response.ContentType = "application/octet-stream";
-				Response.AppendHeader("Content-Disposition", "attachment; filename=" +SheetDataView.Table.Rows[0].Field<string>("CharName") + "_" + DateTime.Now.ToShortDateString() + ".txt");
+				Response.AppendHeader("Content-Disposition", "attachment; filename=" + SheetDataView.Table.Rows[0].Field<string>("CharName") + "_" + DateTime.Now.ToShortDateString() + ".txt");
 				Response.TransmitFile(filePath);
 				Response.End();
 			}

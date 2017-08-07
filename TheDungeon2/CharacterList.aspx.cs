@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using System.IO;
 
 namespace TheDungeon
 {
@@ -25,7 +26,27 @@ namespace TheDungeon
 		protected void ConfirmAddButton_Click(object sender, EventArgs e)
 		{
 			//TODO: add character to database
+			//TODO: set InsertParameters
+			CharacterListDataSource.InsertCommand = "INSERT into Characters ([User], [Name], [Active], [DateCreated]) VALUES ('" + Session["UserId"] + "', '" + AddCharacterNameTextBox.Text + "', 1, GETDATE())";
+			CharacterListDataSource.Insert();
+			//TODO: get character id
+			
 
+			/*
+			string filePath = "";                   //TODO: generate file path
+			if (AddCharacterFileUpload.PostedFile.ContentType == "text/txt")      //TODO: include other text file formats
+			{
+				if (File.Exists(filePath))
+				{
+					File.Delete(filePath);
+				}
+				AddCharacterFileUpload.SaveAs(filePath);
+			}
+			else
+			{
+				//TODO: error message
+			}
+			*/
 		}
 	}
 }
