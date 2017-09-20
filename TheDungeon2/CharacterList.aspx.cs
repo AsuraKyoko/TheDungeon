@@ -25,28 +25,42 @@ namespace TheDungeon
 
 		protected void ConfirmAddButton_Click(object sender, EventArgs e)
 		{
-			//TODO: add character to database
-			//TODO: set InsertParameters
-			CharacterListDataSource.InsertCommand = "INSERT into Characters ([User], [Name], [Active], [DateCreated]) VALUES ('" + Session["UserId"] + "', '" + AddCharacterNameTextBox.Text + "', 1, GETDATE())";
+			CharacterListDataSource.InsertCommand = "INSERT into Characters ([User], [Name], [Active], [DateCreated]) VALUES ('" + Session["UserId"] + "', '" + AddCharacterNameTextBox.Text + "', 1, GETDATE()) SET @charIdentity=SCOPE_IDENTITY();";
 			CharacterListDataSource.Insert();
-			//TODO: get character id
 			
+			//TODO: add character id parameters
+		}
 
-			/*
-			string filePath = "";                   //TODO: generate file path
-			if (AddCharacterFileUpload.PostedFile.ContentType == "text/txt")      //TODO: include other text file formats
+		protected void CharacterListDataSource_Inserted(object sender, SqlDataSourceStatusEventArgs e)
+		{
+			string charID = e.Command.Parameters["@charIdentity"].Value.ToString();
+
+			string filePath = Server.MapPath("~/UserSheets/" + User.Identity.GetUserId() + "/" + charID + ".txt");
+
+			Directory.CreateDirectory(filePath);
+
+			if (AddCharacterFileUpload.HasFile)
 			{
-				if (File.Exists(filePath))
+				if (AddCharacterFileUpload.PostedFile.ContentType == "text/txt")
 				{
-					File.Delete(filePath);
+					if (File.Exists(filePath))
+					{
+						File.Delete(filePath);
+					}
+					AddCharacterFileUpload.SaveAs(filePath);
 				}
-				AddCharacterFileUpload.SaveAs(filePath);
+				else
+				{
+					DisplayAlert("Error: the file you've selected is not the proper file type.");
+				}
 			}
-			else
-			{
-				//TODO: error message
-			}
-			*/
+		}
+
+		//Displays a popup window with a simple alert message
+		private void DisplayAlert(string message)
+		{
+			string script = "alert('" + message + "');";
+			ClientScript.RegisterClientScriptBlock(this.GetType(), "Alert", script, true);
 		}
 	}
 }

@@ -36,13 +36,16 @@
 	<br />
 	<asp:GridView ID="CharactersGridView" runat="server" AutoGenerateColumns="False" DataSourceID="CharacterListDataSource" AllowSorting="True">
 		<Columns>
-			<asp:HyperLinkField DataTextField="Name" HeaderText="Name" NavigateUrl="~/CharacterSheet.aspx" />
+			<asp:HyperLinkField DataTextField="Name" HeaderText="Name" NavigateUrl="~/CharacterSheet.aspx" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="CharacterSheet.aspx?id={0}" />
 			<asp:CheckBoxField DataField="Active" HeaderText="Active" SortExpression="Active" ReadOnly="True" />
 			<asp:BoundField DataField="DateModified" HeaderText="Last Modified" />
 			<asp:BoundField DataField="DateCreated" HeaderText="Date Created" SortExpression="DateCreated" ReadOnly="True" />
 		</Columns>
 	</asp:GridView>
-	<asp:SqlDataSource ID="CharacterListDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Id], [Name], [Active], [DateModified], [DateCreated] FROM [Characters] WHERE ([User] = @User)">
+	<asp:SqlDataSource ID="CharacterListDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Id], [Name], [Active], [DateModified], [DateCreated] FROM [Characters] WHERE ([User] = @User)" OnInserted="CharacterListDataSource_Inserted">
+		<InsertParameters>
+			<asp:Parameter Direction="Output" Name="charIdentity" Type="Int32" />
+		</InsertParameters>
 		<SelectParameters>
 			<asp:SessionParameter Name="User" SessionField="UserId" Type="String" />
 		</SelectParameters>

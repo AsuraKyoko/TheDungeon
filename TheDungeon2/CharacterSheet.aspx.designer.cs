@@ -7,19 +7,55 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TheDungeon2 {
+namespace TheDungeon {
     
     
     public partial class CharacterSheet {
         
         /// <summary>
-        /// Repeater1 control.
+        /// NameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        protected global::System.Web.UI.WebControls.Label NameLabel;
+        
+        /// <summary>
+        /// NameTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NameTextBox;
+        
+        /// <summary>
+        /// DateCreatedLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label DateCreatedLabel;
+        
+        /// <summary>
+        /// DateCreatedTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DateCreatedTextBox;
+        
+        /// <summary>
+        /// ActiveCheckBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox ActiveCheckBox;
         
         /// <summary>
         /// SheetTextBox control.
@@ -67,12 +103,12 @@ namespace TheDungeon2 {
         protected global::System.Web.UI.WebControls.SqlDataSource CharacterDataSource;
         
         /// <summary>
-        /// SaveTimer control.
+        /// DeleteCharacterButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.Timer SaveTimer;
+        protected global::System.Web.UI.WebControls.Button DeleteCharacterButton;
     }
 }
